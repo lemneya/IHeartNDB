@@ -70,7 +70,12 @@ Suggested sequencing for the future cleanup gate:
 - Legacy `content/`, `system/`, `templates/` remain exactly as they are.
 - Action requires a separate, founder-approved cleanup gate.
 
-> Out of scope but noted for continuity: `briefs/daily_brief_today.md` is **not
-> legacy** — it is an external Hermes-generated draft that entered the repo
-> during the SSOT gate. It is intentionally left in place per instruction and
-> is tracked separately, not by this review.
+> Continuity note — `daily_brief_today.md`: this was an external
+> Hermes-generated draft that entered the repo during the SSOT gate at
+> `briefs/daily_brief_today.md` (outside `hermes_inbox/`). Under gate
+> **INDB-HERMES-CLEANUP-1** (2026-05-18) it has been **relocated** to
+> `hermes_inbox/briefs/daily_brief_today.md` for review, in line with
+> `docs/hermes_workflow_policy.md`. The content was **moved, not deleted**, and
+> the now-empty `briefs/` folder was removed (its role is served by
+> `hermes_inbox/briefs/`). It awaits Claude review and founder approval before
+> any promotion to `approved/`, `memory/`, or `campaigns/`.
