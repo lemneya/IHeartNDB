@@ -83,6 +83,26 @@ working drafts and historical reference.
 
 ---
 
+## Hermes output workflow
+
+To keep the SSOT clean, Hermes never writes directly into authoritative
+folders. Output flows one way:
+
+```
+Hermes outputs   → hermes_inbox/
+Claude review    → approved/  or  memory/  (proposed, then approved)
+Founder approval → public use
+```
+
+- `hermes_inbox/` — raw Hermes drafts, analyses, briefs (may be messy).
+- `approved/` — founder-approved content ready for use.
+- `archive/` — outdated or rejected material (kept, not deleted).
+- `memory/` — protected SSOT; never receives raw Hermes output.
+
+Full policy: [`docs/hermes_workflow_policy.md`](docs/hermes_workflow_policy.md).
+
+---
+
 ## Current gate
 
 **`INDB-HERMES-SSOT-0`** — Create the foundational single source of truth repo.

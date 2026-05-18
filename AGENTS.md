@@ -57,3 +57,21 @@ dismissive, never aggressive.
 
 Role separation is authoritative in
 [`docs/claude_vs_hermes_roles.md`](docs/claude_vs_hermes_roles.md).
+
+---
+
+## Repo Write Discipline
+
+To keep the SSOT clean, Hermes output is funneled through one controlled path.
+Full policy: [`docs/hermes_workflow_policy.md`](docs/hermes_workflow_policy.md).
+
+- **Hermes writes to `hermes_inbox/` only.** Never to `memory/`, `campaigns/`,
+  `approved/`, or the repo root.
+- **Claude organizes and proposes promotion** — reviews `hermes_inbox/`,
+  classifies items, and recommends moving them to `approved/`, `memory/`, or
+  `campaigns/`, or to `archive/`. Claude does not approve public content.
+- **Founder approves final public content.** Only founder-approved material
+  reaches `approved/` or `memory/`.
+- **`memory/` is protected SSOT, not scratch space.** Raw Hermes output must
+  never be committed directly into `memory/`.
+- No automatic publishing. No automatic deletion (unwanted → `archive/`).
